@@ -1,0 +1,6 @@
+E:\_VmCentral\_ApplicationData\Visual Studio\Projects\TinyLinqJs\TinyLinqJs\bin\TinyLinqJs.dll.config
+E:\_VmCentral\_ApplicationData\Visual Studio\Projects\TinyLinqJs\TinyLinqJs\bin\TinyLinqJs.dll
+E:\_VmCentral\_ApplicationData\Visual Studio\Projects\TinyLinqJs\TinyLinqJs\bin\TinyLinqJs.pdb
+E:\_VmCentral\_ApplicationData\Visual Studio\Projects\TinyLinqJs\TinyLinqJs\obj\Debug\TinyLinqJs.csprojResolveAssemblyReference.cache
+E:\_VmCentral\_ApplicationData\Visual Studio\Projects\TinyLinqJs\TinyLinqJs\obj\Debug\TinyLinqJs.dll
+E:\_VmCentral\_ApplicationData\Visual Studio\Projects\TinyLinqJs\TinyLinqJs\obj\Debug\TinyLinqJs.pdb
