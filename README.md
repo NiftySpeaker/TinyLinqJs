@@ -6,4 +6,4 @@ If you are familiar with Linq-to-Objects and you like Linq, then here is a good 
 
 One big advantage of TinyLinqJs is, as the name says, that in the minified version it's just about 9 kB in size. This is very small if you can get the power of Linq into your JavaScripts. 
 
-So i hope you enjoy it! :D
+So, i hope you enjoy it! :D
