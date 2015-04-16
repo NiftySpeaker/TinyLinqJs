@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo with normal JavaScript</title>
+</head>
+<body>
+    <script src="../Scripts/tinylinq.js"></script>
+
+    <h1>The Mason's</h1>
+
+    <script>
+
+        //Task description: Find Parent-Child-Relationship for family 'Mason' 
+        //  (so filter all Mason's an look for pairs, where one is 20 years older than the other)
+        (function () {
+            //Define data
+            var users = [
+                { id: 1, lastname: 'Mason', firstname: 'John', Age: 10 },
+                { id: 1, lastname: 'Thompson', firstname: 'William', Age: 45 },
+                { id: 1, lastname: 'Ryan', firstname: 'Jack', Age: 77 },
+                { id: 1, lastname: 'Mason', firstname: 'Cynthia', Age: 37 },
+                { id: 1, lastname: 'Mason', firstname: 'Robert', Age: 27 }
+            ];
+
+            //Lookup where Lastname is equal to 'Mason' ...
+            var theMasons = users.Where(function (user) { return user.lastname == 'Mason' });
+
+            //Join all Mason's with each other ...
+            var potentialRelations = theMasons.Join(theMasons,
+                                                    function(left) { return left.lastname},
+                                                    function(right) { return right.lastname},
+                                                    function (left, right) { return { parent: left, child: right } });
+
+            //... then filter those with the correct difference in the Age property
+            var relations = potentialRelations.Where(function (potRel) {
+                return potRel.parent.Age > potRel.child.Age + 20
+            }).ToArray();
+
+            for (var i = 0; i < relations.length; i++) {
+                document.writeln(relations[i].parent.firstname + " is parent of " + relations[i].child.firstname);
+            }
+
+        })();
+    </script>
+</body>
+</html>
